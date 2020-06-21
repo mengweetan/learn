@@ -87,5 +87,4 @@ class Machine:
         #kfold = KFold(n_splits=10, shuffle=True)
         #results = cross_val_score(estimator, self.X, self.dummy_y , cv=kfold)
         
-    def infer(self):
-        model.predict([data])
+  
