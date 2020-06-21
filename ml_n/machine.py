@@ -46,7 +46,7 @@ class Machine:
     def _setup(self):
         
         
-        _dataset = self.df.drop(['__temp'],axis=1)
+        _dataset = self.df.drop(['__temp','__temp2'],axis=1)
         _num_columns = _dataset.shape[1]
         dataset = _dataset.values
 
@@ -82,6 +82,7 @@ class Machine:
         self.mymodel.save(self.dataDir+'/_modelv2.h5')
         print ('saved model in {}'.format(self.dataDir))
         print (history)
+        print (dir(history))
         
         #estimator = KerasClassifier(build_fn=self.model, epochs=200, batch_size=5, verbose=0)
         #kfold = KFold(n_splits=10, shuffle=True)
